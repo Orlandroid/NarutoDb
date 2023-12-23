@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -44,4 +45,6 @@ dependencies {
     implementation(Dependencies.ROOM)
     implementation(Dependencies.ROOM_KOTLIN_EXTENSION)
     kapt(Dependencies.ROOM_COMPILER)
+    implementation(Dependencies.RETROFIT_CONVERTER_GSON)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 }

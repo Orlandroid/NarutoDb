@@ -59,5 +59,9 @@ dependencies {
     implementation(Dependencies.DAGGER_HILT)
     kapt(Dependencies.DAGGER_HILT_ANDROID_COMPILER)
     kapt(Dependencies.DAGGER_HILT_COMPILER)
+    implementation(Dependencies.PAGING)
+    // Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 
 }

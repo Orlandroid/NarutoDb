@@ -80,5 +80,6 @@ dependencies {
     implementation(Dependencies.GLIDE)
     annotationProcessor(Dependencies.GLIDE_COMPILER)
     implementation(Dependencies.SWIPE_REFRESH_LAYOUT)
+    implementation(Dependencies.PAGING)
     //implementation("com.github.Spikeysanju:MotionToast:1.4")
 }

@@ -1,43 +1,26 @@
 package com.example.data.di
 
 
-
-import com.example.data.local.LocalDataSourceImpl
-import com.example.data.remote.Api
-import com.example.data.remote.RemoteDataSourceImpl
-import com.example.domain.LocalDataSource
-import com.example.domain.RemoteDataSource
-import dagger.Binds
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
-
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class DataModule {
-
-    @Binds
-    abstract fun bindRemoteDataSource(impl: RemoteDataSourceImpl): RemoteDataSource
-
-    @Binds
-    abstract fun bindLocalDataSource(impl: LocalDataSourceImpl): LocalDataSource
-
-}
 
 @Module
 @InstallIn(SingletonComponent::class)
 object ModuleApi {
 
 
-    private const val BASE_URL = "https://fakestoreapi.com/"
+    private const val BASE_URL = " https://narutodb.xyz/api/"
+    private val contentType = "application/json".toMediaType()
 
     @Singleton
     @Provides
@@ -54,18 +37,21 @@ object ModuleApi {
             .build()
     }
 
-    @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .client(okHttpClient)
-        .build()
+    @Singleton
+    fun json(): Json = Json {
+        ignoreUnknownKeys = true
+        isLenient = true
+        prettyPrint = true
+    }
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): Api =
-        retrofit.create(Api::class.java)
+    fun provideRetrofit(json: Json, okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(json.asConverterFactory(contentType))
+        .client(okHttpClient)
+        .build()
 
 
 }
