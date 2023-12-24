@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.entities.remote.User
+import com.example.presentation.databinding.ItemCharacterBinding
 import com.example.presentation.extensions.click
-import com.example.presentation.databinding.ItemUserBinding
 
 
 class UserAdapter(private val clickOnUser: (User) -> Unit) :
@@ -19,21 +19,18 @@ class UserAdapter(private val clickOnUser: (User) -> Unit) :
     }
 
 
-    class ViewHolder(private val binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemCharacterBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User, clickOnUser: (User) -> Unit) = with(binding) {
             root.click {
                 clickOnUser(user)
             }
-            tvNombre.text = user.name.fullName()
-            tvCorreo.text = user.email
-            tvNumero.text = user.number.toString()
-            tvId.text = user._id
+
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ItemUserBinding.inflate(layoutInflater, parent, false)
+        val binding = ItemCharacterBinding.inflate(layoutInflater, parent, false)
         return ViewHolder(binding)
     }
 

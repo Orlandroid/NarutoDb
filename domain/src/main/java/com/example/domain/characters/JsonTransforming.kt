@@ -10,36 +10,12 @@ import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.JsonTransformingSerializer
 import kotlinx.serialization.serializer
 
-object UnwrappingJsonEnglishListSerializer :
-    JsonTransformingSerializer<List<String>>(serializer()) {
-    override fun transformDeserialize(element: JsonElement) =
-        when (element) {
-            is JsonArray -> element
-            is JsonObject -> JsonArray(
-                listOf(
-                    element.getValue("english"),
-                )
-            )
-
-            else -> throw IllegalArgumentException(
-                "Invalid JSON format for english",
-            )
-        }
-}
 
 object UnwrappingJsonEnglishListSerializerV2 :
     JsonTransformingSerializer<List<String>>(serializer()) {
     override fun transformDeserialize(element: JsonElement): JsonElement {
         if (element is JsonArray) return element
         return JsonArray(listOf(element))
-    }
-}
-
-object UnwrappingJsonEnglishListSerializerV3 :
-    JsonTransformingSerializer<Personal>(serializer()) {
-    override fun transformDeserialize(element: JsonElement): JsonElement {
-        if (element is JsonArray) return JsonNull
-        return element
     }
 }
 

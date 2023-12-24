@@ -13,12 +13,18 @@ import com.example.presentation.extensions.hideProgress
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
 import com.example.presentation.extensions.showProgress
+import com.example.presentation.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class CharactersFragment : BaseFragment<FragmentCharactersBinding>(R.layout.fragment_characters) {
+
+    override fun configureToolbar() = MainActivity.ToolbarConfiguration(
+        showToolbar = true,
+        toolbarTitle = getString(R.string.characters)
+    )
 
     private val viewModel: CharactersViewModel by viewModels()
     private val adapter = CharacterAdapter {}

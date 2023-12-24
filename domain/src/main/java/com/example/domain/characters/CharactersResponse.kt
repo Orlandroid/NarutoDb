@@ -1,20 +1,7 @@
 package com.example.domain.characters
 
-import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.descriptors.buildClassSerialDescriptor
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.JsonDecoder
-import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.JsonTransformingSerializer
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.serializer
 
 @Serializable
 data class CharactersResponse(
@@ -29,7 +16,7 @@ data class Character(
     val debut: Debut? = null,
     val family: Family? = null,
     val id: Int,
-    val images: List<String>,
+    val images: List<String> = emptyList(),
     val jutsu: List<String>? = null,
     val name: String,
     val natureType: List<String>? = null,
@@ -84,52 +71,6 @@ data class Personal(
     val weight: Weight? = null
 )
 
-object PersonalSerializer : KSerializer<Personal> {
-    override val descriptor: SerialDescriptor = buildClassSerialDescriptor("personal")
-
-    override fun serialize(encoder: Encoder, value: Personal) {}
-
-    override fun deserialize(decoder: Decoder): Personal {
-        val input = decoder as JsonDecoder
-        val jsonObj = input.decodeJsonElement().jsonObject
-        val affiliation = jsonObj["affiliation"]
-        val age = jsonObj["age"]
-        val birthdate = jsonObj["birthdate"]
-        val bloodType = jsonObj["bloodType"]
-        val clan = jsonObj["clan"]
-        val classification = jsonObj["classification"]
-        val height = jsonObj["height"]
-        val occupationList = arrayListOf<String>()
-        val occupation = jsonObj["occupation"]
-        if (occupation !is JsonArray) {
-            occupationList.add(occupation.toString())
-        }
-        val partner = jsonObj["partner"]
-        val sex = jsonObj["sex"]
-        val status = jsonObj["status"]
-        val team = jsonObj["team"]
-        val titles = jsonObj["titles"]
-        val weight = jsonObj["weight"]
-        return Personal(
-            affiliation = null,
-            age = null,
-            birthdate = birthdate.toString(),
-            bloodType = null,
-            clan = null,
-            classification = null,
-            height = null,
-            occupation = occupationList,
-            partner = null,
-            sex = null,
-            status = null,
-            team = null,
-            titles = null,
-            weight = null
-        )
-    }
-}
-
-
 @Serializable
 data class Rank(
     val ninjaRank: NinjaRank? = null, val ninjaRegistration: String? = null
@@ -143,23 +84,6 @@ data class VoiceActors(
     val japanese: List<String>? = null
 )
 
-object SomeObjSerializer : KSerializer<VoiceActors> {
-    override val descriptor: SerialDescriptor = buildClassSerialDescriptor("voiceActors")
-
-    override fun serialize(encoder: Encoder, value: VoiceActors) {}
-
-    override fun deserialize(decoder: Decoder): VoiceActors {
-        val input = decoder as JsonDecoder
-        val jsonObj = input.decodeJsonElement().jsonObject
-        val myEnglishList = arrayListOf<String>()
-        val english = jsonObj["english"]
-        val japanese = jsonObj["japanese"]
-        if (english !is JsonArray) {
-            myEnglishList.add(english.toString())
-        }
-        return VoiceActors(myEnglishList, null)
-    }
-}
 
 @Serializable
 data class Age(

@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.domain.characters.Character
-import com.example.presentation.databinding.ItemUserBinding
+import com.example.presentation.R
+import com.example.presentation.databinding.ItemCharacterBinding
 import com.example.presentation.extensions.click
 
 
@@ -17,7 +19,7 @@ class CharacterAdapter(private val clickOnCharacter: (Character) -> Unit) :
         parent: ViewGroup, viewType: Int
     ): CharacterViewHolder {
         return CharacterViewHolder(
-            ItemUserBinding.inflate(
+            ItemCharacterBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
         )
@@ -31,11 +33,18 @@ class CharacterAdapter(private val clickOnCharacter: (Character) -> Unit) :
         }
     }
 
-    inner class CharacterViewHolder(private val binding: ItemUserBinding) :
+    inner class CharacterViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: Character) = with(binding) {
+        fun bind(character: Character) = with(binding) {
             root.click {
-                clickOnCharacter(user)
+                clickOnCharacter(character)
+            }
+            tvName.text = character.name
+            if (character.images.isNotEmpty()) {
+                image.load(character.images[0]) {
+                    placeholder(R.drawable.loading_animation)
+                    error(R.drawable.characters)
+                }
             }
         }
     }
