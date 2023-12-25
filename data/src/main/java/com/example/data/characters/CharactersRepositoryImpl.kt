@@ -11,7 +11,7 @@ class CharactersRepositoryImpl @Inject constructor(private val charactersApi: Ch
     override suspend fun getAllCharacters(page: String) =
         charactersApi.getAllCharacters(page = page)
 
-    override suspend fun getCharactersById() = charactersApi.getCharacterById(1)
+    override suspend fun getCharactersById(characterId:Int) = charactersApi.getCharacterById(characterId)
 
 
 }

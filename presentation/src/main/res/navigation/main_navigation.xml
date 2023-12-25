@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_charactersFragment"
             app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_clansFragment"
+            app:destination="@id/clansFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
         android:name="com.example.presentation.ui.characters.CharactersFragment"
         android:label="CharactersFragment"
         tools:layout="@layout/fragment_characters" />
+    <fragment
+        android:id="@+id/clansFragment"
+        android:name="com.example.presentation.ui.clans.ClansFragment"
+        android:label="ClansFragment"
+        tools:layout="@layout/fragment_clans" />
 </navigation>
