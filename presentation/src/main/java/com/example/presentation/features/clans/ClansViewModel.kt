@@ -1,4 +1,4 @@
-package com.example.presentation.ui.clans
+package com.example.presentation.features.clans
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager

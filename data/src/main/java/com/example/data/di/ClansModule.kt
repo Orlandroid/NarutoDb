@@ -6,7 +6,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -15,10 +17,21 @@ import javax.inject.Singleton
 
 object ClansModule {
 
+    private const val CLANS = "Clans"
+    private const val BASE_URL_CLANS = "https://naruto-api-rsl3.onrender.com/api/v1/clans/"
 
     @Singleton
     @Provides
-    fun provideClansApi(retrofit: Retrofit) = retrofit.create(ClansApi::class.java)
+    @Named(CLANS)
+    fun provideRetrofitClans(okHttpClient: OkHttpClient): Retrofit = provideRetrofitGeneric(
+        okHttpClient = okHttpClient,
+        baseUrl = BASE_URL_CLANS
+    )
+
+    @Singleton
+    @Provides
+    fun provideClansApi(@Named(CLANS) retrofit: Retrofit): ClansApi =
+        retrofit.create(ClansApi::class.java)
 
     @Provides
     @Singleton

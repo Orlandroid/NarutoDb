@@ -7,7 +7,8 @@ import javax.inject.Singleton
 @Singleton
 class ClansRepositoryImpl @Inject constructor(private val clansApi: ClansApi) :
     ClansRepository {
-    override suspend fun getAllCharacters(page: String) = clansApi.getAllClans(page)
+    override suspend fun getAllCharacters(page: String) = clansApi.getAllClans(page = page)
+    override suspend fun getAllClans(page: String) = clansApi.getAllClans()
 
 
 }

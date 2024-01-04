@@ -1,13 +1,19 @@
-package com.example.presentation.ui.clans
+package com.example.presentation.features.clans
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.example.data.clans.getImageFromClan
 import com.example.domain.clans.Clan
+import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
 import com.example.presentation.extensions.click
+import com.example.presentation.extensions.loadImage
 
 
 class ClansAdapter(private val clickOnCharacter: (Clan) -> Unit) :
@@ -38,6 +44,8 @@ class ClansAdapter(private val clickOnCharacter: (Clan) -> Unit) :
                 clickOnCharacter(clan)
             }
             tvClan.text = clan.name
+            val imageClan = getImageFromClan(clan.name)
+            imageCharacter.loadImage(imageClan)
         }
     }
 

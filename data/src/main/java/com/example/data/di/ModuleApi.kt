@@ -18,9 +18,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ModuleApi {
 
-
-    private const val BASE_URL = " https://narutodb.xyz/api/"
+    private const val BASE_URL = "https://narutodb.xyz/api/"
     private val contentType = "application/json".toMediaType()
+
+    //https://www.narutoql.com/docs#all-clans apollo
+    //https://api-dattebayo.vercel.app/docs
+    //https://naruto-api-rsl3.onrender.com/api/v1/clans  https://github.com/Gustavonobreza/naruto-api
 
     @Singleton
     @Provides
@@ -52,6 +55,5 @@ object ModuleApi {
         .addConverterFactory(json.asConverterFactory(contentType))
         .client(okHttpClient)
         .build()
-
 
 }

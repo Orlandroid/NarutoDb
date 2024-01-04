@@ -13,6 +13,9 @@ import androidx.annotation.ColorRes
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.example.presentation.R
 
 
 fun Activity.hideKeyboard() {
@@ -28,6 +31,11 @@ fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
+fun ImageView.loadImage(urlImage: String) {
+    Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
+        .error(R.drawable.clans)
+        .into(this)
+}
 
 fun ImageView.setColorFilterImage(context: Context, @ColorRes colorInt: Int) {
     this.setColorFilter(

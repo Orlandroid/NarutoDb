@@ -1,4 +1,4 @@
-package com.example.presentation.ui.characters
+package com.example.presentation.features.clans
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -7,27 +7,27 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.paging.LoadState
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
-import com.example.presentation.databinding.FragmentCharactersBinding
+import com.example.presentation.databinding.FragmentClansBinding
 import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.hideProgress
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
 import com.example.presentation.extensions.showProgress
-import com.example.presentation.ui.MainActivity
+import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class CharactersFragment : BaseFragment<FragmentCharactersBinding>(R.layout.fragment_characters) {
+class ClansFragment : BaseFragment<FragmentClansBinding>(R.layout.fragment_clans) {
 
     override fun configureToolbar() = MainActivity.ToolbarConfiguration(
         showToolbar = true,
-        toolbarTitle = getString(R.string.characters)
+        toolbarTitle = getString(R.string.clans)
     )
 
-    private val viewModel: CharactersViewModel by viewModels()
-    private val adapter = CharacterAdapter {}
+    private val viewModel: ClansViewModel by viewModels()
+    private val adapter = ClansAdapter {}
     override fun setUpUi() = with(binding) {
         recycler.adapter = adapter
         getCharacters()

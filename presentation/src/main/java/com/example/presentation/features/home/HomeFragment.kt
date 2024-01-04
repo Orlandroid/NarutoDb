@@ -1,4 +1,4 @@
-package com.example.presentation.ui.home
+package com.example.presentation.features.home
 
 import androidx.navigation.fragment.findNavController
 import com.example.presentation.R

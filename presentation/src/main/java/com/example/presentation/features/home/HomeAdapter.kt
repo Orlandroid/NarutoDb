@@ -1,4 +1,4 @@
-package com.example.presentation.ui.home
+package com.example.presentation.features.home
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

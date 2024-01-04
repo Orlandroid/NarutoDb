@@ -1,4 +1,4 @@
-package com.example.presentation.ui.characters
+package com.example.presentation.features.characters
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager

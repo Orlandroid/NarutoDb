@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.presentation.ui.home.HomeFragment"
+        android:name="com.example.presentation.features.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.example.presentation.ui.characters.CharactersFragment"
+        android:name="com.example.presentation.features.characters.CharactersFragment"
         android:label="CharactersFragment"
         tools:layout="@layout/fragment_characters" />
     <fragment
         android:id="@+id/clansFragment"
-        android:name="com.example.presentation.ui.clans.ClansFragment"
+        android:name="com.example.presentation.features.clans.ClansFragment"
         android:label="ClansFragment"
         tools:layout="@layout/fragment_clans" />
 </navigation>
