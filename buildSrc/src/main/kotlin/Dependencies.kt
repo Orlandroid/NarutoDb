@@ -1,5 +1,10 @@
 package com.example.androidbase.presentation
 
+import com.example.androidbase.presentation.Dependencies.ROOM
+import com.example.androidbase.presentation.Dependencies.ROOM_COMPILER
+import com.example.androidbase.presentation.Dependencies.ROOM_KOTLIN_EXTENSION
+import org.gradle.api.artifacts.dsl.DependencyHandler
+
 
 object Dependencies {
     const val NAVIGATION_VERSION = "2.7.5"
@@ -23,7 +28,8 @@ object Dependencies {
     const val MOSHI = "com.squareup.moshi:moshi-kotlin:1.11.0"
     const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:1.11.0"
     const val MOSHI_CODEGEN = "com.squareup.moshi:moshi-kotlin-codegen:1.11.0"
-    const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
+    const val NAVIGATION_FRAGMENT =
+        "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
     const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$NAVIGATION_VERSION"
     const val PAGING = "androidx.paging:paging-runtime:3.0.0-beta02"
     const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:3.0.0-beta02"
@@ -41,3 +47,40 @@ object Dependencies {
     const val TEST_EXPRESO = "androidx.test.espresso:espresso-core:3.5.0"
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
+
+fun DependencyHandler.room() {
+    implementation(Dependencies.ROOM)
+    implementation(Dependencies.ROOM_KOTLIN_EXTENSION)
+    kapt(Dependencies.ROOM_COMPILER)
+}
+
+fun DependencyHandler.lifecycle() {
+    implementation(Dependencies.VIEW_MODEL)
+    implementation(Dependencies.LIVE_DATA)
+    implementation(Dependencies.ANDROIDX_FRAGMENT)
+}
+
+fun DependencyHandler.retrofit() {
+    implementation(Dependencies.RETROFIT)
+    implementation(Dependencies.RETROFIT_CONVERTER_GSON)
+    implementation(Dependencies.RETROFIT_CONVERTER_MOSHI)
+    implementation(Dependencies.RETROFIT_INTERCEPTOR)
+}
+
+fun DependencyHandler.daggerHilt() {
+    implementation(Dependencies.DAGGER_HILT)
+    kapt(Dependencies.DAGGER_HILT_ANDROID_COMPILER)
+    kapt(Dependencies.DAGGER_HILT_COMPILER)
+}
+
+fun DependencyHandler.navigationComponent() {
+    implementation(Dependencies.NAVIGATION_FRAGMENT)
+    implementation(Dependencies.NAVIGATION_UI)
+}
+
+fun DependencyHandler.glide() {
+    implementation(Dependencies.GLIDE)
+    annotationProcessor(Dependencies.GLIDE_COMPILER)
+}
+
+

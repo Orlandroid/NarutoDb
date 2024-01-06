@@ -2,7 +2,6 @@ buildscript {
     val kotlinVersion by extra("1.9.21")
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven(url = "https://jitpack.io")
     }
