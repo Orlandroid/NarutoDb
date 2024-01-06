@@ -10,12 +10,14 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.presentation.R
+import java.lang.Error
 
 
 fun Activity.hideKeyboard() {
@@ -31,10 +33,17 @@ fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
-fun ImageView.loadImage(urlImage: String) {
-    Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
-        .error(R.drawable.clans)
-        .into(this)
+fun ImageView.loadImage(urlImage: String, @DrawableRes imageOnError: Int? = null) {
+    if (imageOnError == null) {
+        Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
+            .error(R.drawable.clans)
+            .into(this)
+    } else {
+        Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
+            .error(imageOnError)
+            .error(R.drawable.clans)
+            .into(this)
+    }
 }
 
 fun ImageView.setColorFilterImage(context: Context, @ColorRes colorInt: Int) {

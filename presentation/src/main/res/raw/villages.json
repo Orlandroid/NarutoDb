@@ -1,0 +1,234 @@
+[
+    {
+      "name": "Amegakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/0/0c/Amegakure_Anime.png/revision/latest/scale-to-width-down/1000?cb=20140117143441&path-prefix=es",
+      "description": "literalmente su nombre significa (Aldea Oculta entre la Lluvia) es una pequeña aldea que se encuentra altamente industrializada, la cual es considerada como una tierra apartada del mundo exterior. Una serie de pequeñas aldeas rodean esta aldea. Como su nombre lo indica, llueve casi permanentemente sobre el pueblo. Muchos ninjas de este pueblo parecen llevar una especie de máscara que les permite respirar bajo el agua de la lluvia y llevan paraguas como sus armas ninja, que les permite protegerse de la lluvia eterna de su aldea."
+    },
+    {
+      "name": "Bamboo Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/4/45/Bamboo_Village.png/revision/latest/scale-to-width-down/320?cb=20161223103852",
+      "description": "Es un pequeño pueblo en la Tierra del Agua Caliente. Está rodeado por un bosque de bambú, y como tal, la mayoría de los edificios y bienes del pueblo están hechos de bambú. Debido a que es un pueblo tan remoto, los aldeanos recibieron ayuda del Grupo del Rayo en el pasado. Cuando el Grupo del Rayo entró en conflicto con Kirigakure, sus miembros sobrevivientes buscaron refugio en el Pueblo Bambú. Los aldeanos se negaron a ayudarlos, temiendo represalias de Kiri."
+    }
+    ,
+    {
+      "name": "Ceramic Village",
+      "image": "",
+      "description": "La Aldea de la Cerámica (陶の里, Chori no Sato) era una pequeña aldea del País del Viento, cerca de la frontera con el País de los Ríos. La zona que rodeaba la aldea no era tan árida como la mayor parte del país, ya que estaba bien arbolada. Por su nombre, la aldea era famosa por su cerámica, cuya arcilla se recogía en los alrededores. Las baldosas de cerámica adornaban todos los edificios de la aldea y las altas chimeneas de los hornos eran comunes por todas partes."
+    }
+
+    ,
+    {
+      "name": "Curtain Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/4/44/Aldea_Cortina.png/revision/latest/scale-to-width-down/1000?cb=20200826015706&path-prefix=es",
+      "description": "La Aldea Cortina (幄の里, Tobari no Sato) es la capital del País del Silencio, con la aldea teniendo el único mercado negro en la región. Debido a que los aldeanos tratan de sobrevivir desesperadamente, los shinobis llegan a vender sus protectores de frente por dinero, mientras que aquellos con dinero obtienen todo lo que quieren. Criminales del Libro Bingo buscan refugio en la aldea."
+    }
+
+    ,
+    {
+      "name": "Daidai Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/f/fa/Aldea_Daidai.png/revision/latest/scale-to-width-down/1000?cb=20190814225912&path-prefix=es",
+      "description": "La Aldea Daidai es un pequeño pueblo situado en el País del Fuego en el que habita el Clan Yoimura."
+    }
+
+    ,
+    {
+      "name": "Genjutsu Tree Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/e/e5/Village_hidden_in_Genjutsu_Trees.png/revision/latest/scale-to-width-down/1000?cb=20220218111253",
+      "description": "Esta aldea sin nombre está escondida entre árboles especiales que producen un efecto similar al genjutsu, protegiendo así a la aldea de los invasores. Naruto y Jiraiya llegaron a la aldea para perfeccionar las habilidades de Naruto para repeler el genjutsu. Los aldeanos utilizan bombas de chile para contrarrestar los efectos del genjutsu. Allí se encontraron con Kandachi y sus ayudantes. Con la ayuda de Tanishi, Naruto y Jiraiya consiguieron derrotar a su enemigo."
+    }
+    ,
+    {
+      "name": "Hachō Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/8/87/Hacho_village.png/revision/latest/scale-to-width-down/320?cb=20121129142847",
+      "description": "La aldea Hachō (ハチョウ村, Hachō-mura) es una aldea situada en las afueras de la frontera del País del Fuego. Mantienen una relación muy amistosa con la aldea Tonika. Cuando la aldea fue atacada por Kabuto Yakushi en su intento de acceder al Agujero, todos los aldeanos que pudieron sobrevivir huyeron a esta aldea y la Aldea Hachō envió más tarde oficiales para ayudar a vigilar la aldea en ruinas. Disonasu, el jefe de la aldea también fue a la Aldea Tonika para ayudar en la rehabilitación de la aldea."
+    }
+    ,
+    {
+      "name": "Hoshigakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/0/01/Hoshigakure.png/revision/latest/scale-to-width-down/1000?cb=20150915022436&path-prefix=es",
+      "description": "Hoshigakure (星隠れの里, Hoshigakure no Sato, significa literalmente (Aldea Oculta de la Estrella) fue presentado durante la saga de relleno de Hoshigakure. Se encuentra en el País de los Osos, y es una de las Aldeas Shinobi menos conocidas en el universo de Naruto. Hoshigakure se formó en algún momento después de que un extraño meteorito, que los habitantes llaman la 'estrella', aterrizó en la zona 200 años antes. No hay árboles o plantas alrededor de donde aterrizó la Estrella. "
+    }
+    ,
+    {
+      "name": "Howling Wolf Village",
+      "image": "https://example.com/image2.jpg",
+      "description": "La Aldea del Lobo Aullador (狼哭の里, Rōkoku no Sato) fue originalmente un asentamiento del clan Kodon. Desde tiempos remotos, el asentamiento era atacado periódicamente por Rōen, un monstruo parecido a un lobo. Los Kodon acabaron encontrando una forma de sellar a Rōen, lo que trajo la paz a la región y llevó a los no Kodon a establecerse en la aldea. Vendiendo medicinas y ofreciendo modestos servicios shinobi, el Lobo Aullador fue capaz de mantenerse como aldea oculta."
+    }
+    ,
+    {
+      "name": "Inaho Village",
+      "image": "",
+      "description": "La aldea de Inaho (稲穂村, Inaho-mura, TV en inglés: Rice Village) se encuentra cerca de las colinas donde Genmai fue secuestrado.."
+    }
+    ,
+    {
+      "name": "Ishigakure",
+      "image": "https://static.wikia.nocookie.net/narutofanon/images/9/9d/Ishigakure.jpg/revision/latest/scale-to-width-down/320?cb=20120712185332",
+      "description": "Ishigakure no Sato (石隠れの里, Literalmente significa: Aldea Oculta en las Piedras), es la aldea oculta del País de la Piedra. La aldea tiene una gran influencia cultural de Sunagakure e Iwagakure, ya que el País de la Piedra se encuentra entre el País del Viento y el País de la Tierra. Sus shinobi están entrenados principalmente en el uso de la Liberación de Tierra, y son expertos en armar trampas y desconcertar a los invasores y a sus oponentes en el terreno irregular y lleno de cañones de su país."
+    }
+    ,
+    {
+      "name": "Iwagakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/2/23/Iwagakure_Parte_III_Anime.jpg/revision/latest/scale-to-width-down/1000?cb=20181223103620&path-prefix=es",
+      "description": "Iwagakure (岩隠れの里, Iwagakure no Sato, literalmente significa (Aldea Oculta entre las Rocas) es un aldea ninja que se encuentra en el País de la Tierra. Como es una de las Cinco Grandes Aldeas Shinobis tiene un Kage, que es el líder del pueblo conocido con el título de Tsuchikage, actualmente ha habido cuatro, siendo la más reciente Kurotsuchi. Los ninjas de esta aldea se especializan en el uso de técnicas que utilizan la naturaleza tipo Tierra. Además, se sabe que esta aldea ha tenido en su posesión dos bestias con colas: el Cuatro Colas y al Cinco Colas."
+    }
+    ,
+    {
+      "name": "Jōmae Village",
+      "image": "",
+      "description": "La Aldea Jōmae (錠前の里, Jōmae no Sato, que significa literalmente: Aldea de la Cerradura) es una aldea shinobi exclusiva del anime situada en el País de las Llaves. Los shinobi de esta aldea son expertos en espionaje con el fin de obtener información para negociar con naciones más grandes y poderosas. En esta aldea, los ninjas parecen estar entrenados específicamente para obtener información sin dar nada a cambio, como demuestra la técnica de lectura de la mente de Hanare y la voluntad de su líder de suicidarse antes que ser tomado como rehén por un ninja enemigo."
+    }
+    ,
+    {
+      "name": "Kagerō Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/9/99/Villa_de_la_Efimera_Destruida.png/revision/latest?cb=20100816153749&path-prefix=es",
+      "description": "La Villa Kagerō (陽炎の里, Kagerō no Sato) fue una pequeña villa en el País de las Montañas que fue introducida en los rellenos del anime.[1] Esta aldea participó en una batalla hace 30 años con Konoha, según dicen, ninguna de las aldeas se rendía, pero llegó un momento en que un batallón de la Hoja hizo un ataque sorpresa, dejando toda la aldea destruida. Tres meses después del ataque, la villa firmó una tregua, pero en realidad era para que uno de sus ninjas llamado Gennō se infiltrara en la aldea enemiga para poner una gran cantidad de sellos explosivos y así poder destruir Konoha. Pero dicho plan no se llevó a cabo, ya que el líder había muerto y su sucesor decidió firmar el tratado de paz. Al final, la Villa Kagerō dejó de existir, ya que recibió un ataque de Tanigakure, haciendo que desapareciera para siempre y que el único que sobreviviera fuera Gennō, ya que estaba en Konoha en dicho momento. "
+    }
+    ,
+    {
+      "name": "Kirigakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/1/17/Kirigakure_Actualidad_Anime.png/revision/latest?cb=20240102205050&path-prefix=es",
+      "description": "Kirigakure (霧隠れの里, Kirigakure no sato, que significa literalmente (Aldea Oculta de la Niebla), también conocida como la Aldea de la Niebla Sangrienta (血霧の里, Chigiri no Sato) es una aldea ninja que se encuentra en el País del Agua. Al ser una de las grandes aldeas shinobi, tiene un Kage, que es el líder de la aldea conocido con el titulo de Mizukage, hasta ahora han sido seis, el más reciente es Chōjūrō. Los shinobis de esta aldea son muy hábiles en el uso de técnicas de Elemento Agua."
+    }
+    ,
+    {
+      "name": "Kisaragi Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/b/b8/Villa_Kisaragi.png/revision/latest/scale-to-width-down/1000?cb=20121111224935&path-prefix=es",
+      "description": "La Villa Kisaragi (如月の里, Kisaragi no Sato) es una aldea que aparece en Naruto: Uzumaki Chronicles 2. Se ubica al sur de Konohagakure y fue el blanco del ataque de unos bandidos aliados al Clan Shirogane en su búsqueda de los Orbes Espirituales. "
+    }
+    ,
+    {
+      "name": "Konohagakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/1/11/Konohagakure_a%C3%B1os_despu%C3%A9s_de_la_Cuarta_Guerra.png/revision/latest?cb=20150815082439&path-prefix=es",
+      "description": "Konohagakure (木ノ葉隠れの里, Konohagakure no Sato, literalmente significa (Aldea Oculta Entre las Hojas), también conocida como (Aldea Oculta en las Hojas) o (Aldea Oculta de la Hoja) es la aldea oculta del País del Fuego. Como una de las Cinco Grandes Aldeas Ninja, Konoha tiene un Kage cómo líder conocido como el Hokage. En total, Konoha, ha tenido siete Hokages, siendo Naruto Uzumaki el actual. En una montaña que domina el pueblo desde el norte se eleva la Roca Hokage. A pesar de que Konoha, al igual que el país en el que reside, ha sido relativamente pacífica desde el final de la Cuarta Gran Guerra Mundial Shinobi, sigue siendo uno de los pueblos más poderosos que existen, teniendo un gran poder militar e influencia, aunque esto había disminuido hace unos años por los ataques de Orochimaru y Pain. "
+    }
+    ,
+    {
+      "name": "Kumogakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/b/b6/Kumogakure_Anime.png/revision/latest?cb=20100524011545&path-prefix=es",
+      "description": "Kumogakure (雲隠れの里, Kumogakure no Sato; literalmente (Aldea Oculta de las Nubes) es la Aldea Oculta del País del Rayo. Como una de las Cinco Grandes Aldeas Shinobi, Kumogakure posee su propio Kage, un líder conocido como el Raikage. Cinco ninjas han estado en el puesto, el más reciente es Darui. El uso de técnicas de Elemento Rayo y del Kenjutsu parecen ser comunes en los ninjas de la aldea. Fue la única de las Cinco Grandes Aldeas que nunca tuvo un prófugo en Akatsuki,algo de lo que el Cuarto Raikage se enorgullecía. "
+    }
+    ,
+    {
+      "name": "Kusagakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/0/09/Kusagakure.png/revision/latest/scale-to-width-down/1000?cb=20180830235001&path-prefix=es",
+      "description": "La Kusagakure (草隠れの里, Kusagakure no Sato, literalmente (Aldea Oculta de la Hierba) está en un país desconocido que los fans nombraron País de la Hierba, este es el hogar de la ninja Karin, médico personal de Orochimaru y miembro de la organización Taka. Su símbolo de protector frontal son tres hojas de hierba. "
+    }
+    ,
+    {
+      "name": "Mount Katsuragi",
+      "image": "https://static.wikia.nocookie.net/naruto/images/d/df/Mount_Katsuragi.png/revision/latest/scale-to-width-down/320?cb=20210804200853",
+      "description": "El monte Katsuragi (葛城山, Katsuragizan) es una montaña que alberga el kinjutsu del clan Tsuchigumo. Hotaru y Tonbee viven en esta montaña. Para evitar que cualquier intruso obtenga el kinjutsu, la montaña está rodeada por una barrera aparentemente irrompible y protegida por una gran cantidad de trampas. El Grupo Magaki consiguió romper la barrera desde dentro y evadir todas las trampas con éxito."
+    }
+    ,
+    {
+      "name": "Mount Myōboku",
+      "image": "https://static.wikia.nocookie.net/naruto/images/5/50/My%C5%8Dbokuzan.PNG/revision/latest?cb=20160224020751",
+      "description": "El monte Myōboku (妙木山, Myōbokuzan, que significa literalmente: Montaña del Árbol Misterioso/Exquisito), también conocido como la (Montaña del Desconcierto) (迷いの山, Mayoi no Yama, Viz: Montaña Laberinto) y la 'Tierra de los Sapos' (蝦蟇の国, Gama no Kuni), es una de las tres grandes regiones inexploradas de los sabios, un lugar legendario igual de famoso que los otros dos, el Bosque Shikkotsu y la Cueva Ryūchi.  Es la tierra de los sapos y el lugar donde viven todos los sapos que Naruto, Minato y Jiraiya han invocado. Es el hogar de sapos enormes y pequeños por igual. El Monte Myōboku es una tierra rica y hermosa, cuya máxima autoridad parece ser el Gran Sabio Sapo. Shima y Fukasaku son ambos ancianos y sabios, y parecen tener una autoridad aún mayor que el propio Gamabunta."
+    }
+    ,
+    {
+      "name": "Nadeshiko Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/8/81/Villa_Nadeshiko.JPG/revision/latest?cb=20111111073023&path-prefix=es",
+      "description": "Es una aldea en donde Jiraiya estuvo buscando información para su próximo libro, pero es perseguido por las guardianas del lugar, una de ellas lo encuentra y empiezan una pelea, siendo la futura líder de la villa reta a Jiraiya para casarse con ella pero la pelea queda en empate y Jiraiya hace la promesa que su estudiante terminará la pelea; luego Naruto se encuentra con la sorpresa que debe terminar el duelo de su maestro y casarse. "
+    }
+    ,
+    {
+      "name": "Otogakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/a/a0/Otogakure_actualmente.png/revision/latest/scale-to-width-down/1000?cb=20180802125433&path-prefix=es",
+      "description": "Otogakure (音隠れの里, Otogakure no Sato; significa literalmente (Aldea Oculta del Sonido) es una aldea ninja localizada en el País de los Campos de Arroz. Es la aldea personal de Orochimaru, que fue fundada con el propósito explicito de recolectar ninjas para sus experimentos y su búsqueda de aprender todos los jutsus. "
+    }
+    ,
+    {
+      "name": "Ryūchi Cave",
+      "image": "https://static.wikia.nocookie.net/naruto/images/a/ac/Ry%C5%ABchi_Cave.png/revision/latest/scale-to-width-down/320?cb=20150903040345",
+      "description": "La Cueva Ryūchi (龍地洞, Ryūchidō, que significa literalmente: Cueva del Suelo del Dragón) es una de las tres grandes regiones inexploradas de los sabios, un lugar legendario igual de famoso que los otros dos, el Monte Myōboku y el Bosque Shikkotsu. Es la residencia de las serpientes -incluido el sagrado Sabio de la Serpiente Blanca- y también es donde Orochimaru descubrió la fuente de las habilidades del clan Jūgo. Orochimaru y Kabuto Yakushi se entrenaron aquí para alcanzar el Modo Sabio, aunque sólo este último tuvo éxito en su empeño.  "
+    }
+    ,
+    {
+      "name": "Shangri-la",
+      "image": "https://static.wikia.nocookie.net/thenarutofanon/images/8/80/Ba028f_a55c508c87b84ab8a75285bfe278b878_mv2.jpg/revision/latest?cb=20210311154841",
+      "description": "Shangri-la era un pueblo situado en lo que a veces se llamaba el Valle de las Mentiras. Era un refugio para aquellos con recompensas sobre sus cabezas que querían vivir sus vidas sin preocuparse de ser perseguidos por los cazarrecompensas. Para conseguirlo, los aldeanos utilizaban la Técnica de Transformación para cambiar su apariencia y evitaban pensar en el pasado o incluso hablar de él. Los aldeanos eran tan pocos que todos se conocían -una forma útil de identificar a los visitantes y, por tanto, posibles amenazas-, pero nadie sabía qué aspecto tenía nadie sin la Técnica de Transformación."
+    }
+    ,
+    {
+      "name": "Shikkotsu Forest",
+      "image": "https://staticg.sportskeeda.com/editor/2022/10/dec98-16651481780318.png",
+      "description": "El bosque Shikkotsu (湿骨林, Shikkotsurin, TV en inglés: Bosque Shikkotsu, que significa literalmente: Bosque de Huesos Húmedos) es un lugar legendario y una de las tres regiones de sabios inexploradas; siendo las otras dos: El Monte Myōboku y la Cueva Ryūchi. Es el hogar de la babosa Katsuyu, partes de la cual son invocadas por Tsunade y su discípula Sakura Haruno."
+    }
+    ,
+    {
+      "name": "Shimogakure",
+      "image": "https://static.wikia.nocookie.net/narutofanon/images/7/7c/Shimo_Shinobi.png/revision/latest?cb=20230809152648",
+      "description": "Shimogakure (霜隠れの里, Shimogakure no Sato; literalmente, (Aldea Oculta en el Frío) es la villa oculta del País Helado. Es una aldea menor que no tiene un líder. Fue evacuada por la Alianza Shinobi porque fue elegida para ser campo de batalla de la Cuarta Guerra Mundial Shinobi."
+    }
+    ,
+    {
+      "name": "Sugi Village",
+      "image": "https://static.wikia.nocookie.net/thenarutofanon/images/f/fc/Sugi_Village.jpg/revision/latest?cb=20200802180238",
+      "description": "Kumogakure robó una vez un pergamino que contenía un ninjutsu secreto perteneciente a esta aldea. Aunque no se sabe de qué técnica se trata, al parecer era lo suficientemente poderosa como para que el propio Cuarto Raikage participara en la misión para obtenerla. La aldea intentó inmediatamente recuperar el pergamino contratando al Grupo Nokizaru para que persiguiera a los ladrones."
+    }
+    ,
+    {
+      "name": "Sunagakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/d/dc/Sunagakure_Tercera_Parte.png/revision/latest/scale-to-width-down/1000?cb=20201012174802&path-prefix=es",
+      "description": "Sunagakure (砂隠れの里, Sunagakure no Sato, significa literalmente (Aldea Oculta de la Arena) es una aldea ninja en el País del Viento. Al ser una de las Cinco Grandes Aldeas Ninjas, dicho pueblo tiene un Kage como su líder conocido como el Kazekage, el cual vive en una estructura esférica en el centro del pueblo. Hasta ahora ha habido cinco Kazekages, Gaara es de estos el más reciente. "
+    }
+    ,
+    {
+      "name": "Takigakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/b/bc/Takigakure.png/revision/latest/scale-to-width-down/320?cb=20150430115115",
+      "description": "Takigakure (滝隠れの里, Takigakure no Sato, que significa literalmente: Aldea Oculta por una Cascada) es una aldea situada en un país sin nombre. En cuanto a la apariencia de la aldea, Takigakure parece basarse principalmente en la estética del sudeste asiático. Su líder actual es Shibuki."
+    }
+    ,
+    {
+      "name": "Takumi Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/f/f2/Aldea_takui.jpeg/revision/latest?cb=20110415015247&path-prefix=es",
+      "description": "La Aldea Takumi (匠の里, Takumi no Sato - literalmente (Aldea de los Artesanos) reside en el pequeño País de los Ríos. La aldea fue fundada aproximadamente cien años atrás por un hombre llamado Seimei. "
+    }
+    ,
+    {
+      "name": "Tanigakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/3/30/S%C3%ADmbolo_de_Tanigakure.png/revision/latest?cb=20180227204633&path-prefix=es",
+      "description": "Tanigakure (谷隠れの里, Tanigakure no Sato; literalmente (Aldea Oculta de los Valles) es una aldea oculta del País de los Ríos.[1] Durante la existencia de la Villa Kagerō, luego de la firma de un armisticio entre esta y Konoha, la villa bajó sus defensas. Fue en ese entonces que Tanigakure lanzó un ataque sobre la Villa Kagerō, destruyéndola definitivamente. "
+    }
+    ,
+    {
+      "name": "Tsuchigumo Village",
+      "image": "https://static.wikia.nocookie.net/naruto/images/9/93/Aldea_Oculta_del_Clan_Tsuchigumo.png/revision/latest/scale-to-width-down/1000?cb=20180228141652&path-prefix=es",
+      "description": "La Aldea Oculta del Clan Tsuchigumo es el pueblo donde vive el Clan Tsuchigumo. El pueblo es liderado por el tío de Hotaru, el jefe del clan Tsuchigumo. Este pueblo se compone de los miembros del Clan Tsuchigumo que se negaron a seguir a En no Gyōja al Monte Katsuragi, y que negó la técnica prohibida del clan. Ellos se convirtieron en esclavos por el Grupo de Magaki que buscaban el Kinjutsu."
+    }
+    ,
+    {
+      "name": "Tsukigakure",
+      "image": "https://static.wikia.nocookie.net/thenarutofanon/images/8/8d/Image_%281%29.jpg/revision/latest/scale-to-width-down/225?cb=20210526230856",
+      "description": "Tsukigakure (月隠れの里, Tsukigakure no Sato - literalmente (Aldea Escondida de la Luna), también conocida como (Villa Oculta de la Luna) es una aldea oculta que aparece en el videojuego Naruto Shippūden: Ultimate Ninja Heroes 3, Jiraiya lleva allí a Naruto para entrenar. "
+    }
+
+    ,
+    {
+      "name": "Uzushiogakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/1/14/Uzushiogakure.png/revision/latest?cb=20120202164724&path-prefix=es",
+      "description": "Uzushiogakure (渦潮隠れの里, Uzushiogakure no Sato; literalmente (Aldea Oculta del Remolino) era una antigua aldea que se encontraba dentro del País del Remolino, también llamada la Aldea de la Longevidad (長寿の里, Chōju no Sato) las personas de esta aldea eran reconocidos porque vivían muchos años. Esta aldea tenía una estrecha relación con Konoha hasta el punto que utilizaron el símbolo de esta aldea en los uniformes oficiales de los Chūnin y Jōnin de la hoja (Los espirales rojos) como símbolo de amistad. "
+    }
+    ,
+    {
+      "name": "Yugakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/a/a7/Yugakure.png/revision/latest?cb=20110122052044&path-prefix=es",
+      "description": "(Aldea de las Aguas Termales) es la aldea de donde se originó el miembro de Akatsuki: Hidan. Se encuentra en el Pais de las Aguas Termales. Anteriormente fue una aldea ninja, pero Yugakure decidió que no quería seguir siendo una aldea escondida y se convirtió en un pueblo pacífico y próspero. Sin embargo, Hidan, al crecer mostró seguir la tendencia violenta de la religión del Jashin, la aldea no estuvo de acuerdo con esto y entonces Hidan mató a sus vecinos antes de salir del pueblo. "
+    }
+    ,
+    {
+      "name": "Yukigakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/0/0d/Yukigakure.jpg/revision/latest?cb=20100320211501&path-prefix=es",
+      "description": "La Aldea Oculta de la Nieve (雪隠れの里, Yukigakure no Sato) se encuentra en el País de la Nieve, y aparece solo en la primera película de Naruto. Sus bandas ninjas aparecen en la primera película de Naruto, que son 4 pequeños puntos. Sus ninjas al parecer se especializan en la manipulación del hielo preexistente. En la película, los ninjas de esta aldea tenían armaduras de chakra que los protegían de la mayoría de los ataques de Ninjutsu y Genjutsu, mientras que amplifica las capacidades del usuario. Al final de la película, la nieve se derrite y posteriormente el país se cambia el nombre al País de la Primavera. No se sabe lo que ocurre con la aldea después. "
+    }
+    ,
+    {
+      "name": "Yumegakure",
+      "image": "https://static.wikia.nocookie.net/naruto/images/4/4d/Yumegakure.jpg/revision/latest?cb=20110708175222&path-prefix=es",
+      "description": "Yumegakure fue fundada por el Clan Amagiri, convirtiéndose en la villa oculta de un pequeño país. Un tiempo después, los ninjas del Clan Tenro llegaron a la villa, junto con el Tres Cabezas sellado. Con el paso del tiempo el clan Tenro empezó a ganar poder en la villa, relegando al clan Amagiri a un segundo plano."
+    }
+    
+  ]
+  

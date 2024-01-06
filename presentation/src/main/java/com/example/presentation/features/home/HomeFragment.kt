@@ -16,41 +16,37 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun clickOnMenu(menu: HomeAdapter.MyMenu) {
         findNavController().navigate(
-            when (menu.position) {
-                1 -> {
+            when (menu.menu) {
+                HomeAdapter.MyMenusName.CHARACTERS -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
                 }
 
-                2 -> {
+                HomeAdapter.MyMenusName.CLANS -> {
                     HomeFragmentDirections.actionHomeFragmentToClansFragment()
                 }
 
-                3 -> {
+                HomeAdapter.MyMenusName.VILLAGES -> {
+                    HomeFragmentDirections.actionHomeFragmentToVillagesFragment()
+                }
+
+                HomeAdapter.MyMenusName.KEKKEIGENNKAY -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
                 }
 
-                4 -> {
+                HomeAdapter.MyMenusName.TAILED_BEASTS -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
                 }
 
-                5 -> {
+                HomeAdapter.MyMenusName.TEAMS -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
                 }
 
-                6 -> {
+                HomeAdapter.MyMenusName.AKATSUKI -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
                 }
 
-                7 -> {
+                HomeAdapter.MyMenusName.KARA -> {
                     HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
-                }
-
-                8 -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
-                }
-
-                else -> {
-                    throw IllegalArgumentException("The section to navigate was not found")
                 }
             }
         )
@@ -58,14 +54,25 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun setMenus(): List<HomeAdapter.MyMenu> {
         return listOf(
-            HomeAdapter.MyMenu(R.drawable.characters, "Characters", 1),
-            HomeAdapter.MyMenu(R.drawable.clans, "Clans", 2),
-            HomeAdapter.MyMenu(R.drawable.villages, "Villages", 3),
-            HomeAdapter.MyMenu(R.drawable.kekkeigenkai, "Kekkeigenkai", 4),
-            HomeAdapter.MyMenu(R.drawable.tailedbeasts, "Tailed Beasts", 5),
-            HomeAdapter.MyMenu(R.drawable.teams, "Teams", 6),
-            HomeAdapter.MyMenu(R.drawable.akatsuki, "Akatsuki", 7),
-            HomeAdapter.MyMenu(R.drawable.kara, "Kara", 8)
+            HomeAdapter.MyMenu(
+                R.drawable.characters, "Characters", 1, HomeAdapter.MyMenusName.CHARACTERS
+            ),
+            HomeAdapter.MyMenu(R.drawable.clans, "Clans", 2, HomeAdapter.MyMenusName.CLANS),
+            HomeAdapter.MyMenu(
+                R.drawable.villages, "Villages", 3, HomeAdapter.MyMenusName.VILLAGES
+            ),
+            HomeAdapter.MyMenu(
+                R.drawable.kekkeigenkai, "Kekkeigenkai", 4, HomeAdapter.MyMenusName.KEKKEIGENNKAY,
+
+                ),
+            HomeAdapter.MyMenu(
+                R.drawable.tailedbeasts, "Tailed Beasts", 5, HomeAdapter.MyMenusName.TAILED_BEASTS
+            ),
+            HomeAdapter.MyMenu(R.drawable.teams, "Teams", 6, HomeAdapter.MyMenusName.TEAMS),
+            HomeAdapter.MyMenu(
+                R.drawable.akatsuki, "Akatsuki", 7, HomeAdapter.MyMenusName.AKATSUKI
+            ),
+            HomeAdapter.MyMenu(R.drawable.kara, "Kara", 8, HomeAdapter.MyMenusName.KARA)
         )
     }
 

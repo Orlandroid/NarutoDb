@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_clansFragment"
             app:destination="@id/clansFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_villagesFragment"
+            app:destination="@id/villagesFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -27,4 +30,9 @@
         android:name="com.example.presentation.features.clans.ClansFragment"
         android:label="ClansFragment"
         tools:layout="@layout/fragment_clans" />
+    <fragment
+        android:id="@+id/villagesFragment"
+        android:name="com.example.presentation.features.villages.VillagesFragment"
+        android:label="VillagesFragment"
+        tools:layout="@layout/fragment_villages" />
 </navigation>

@@ -43,8 +43,18 @@ class HomeAdapter(private val clickOnMenu: (MyMenu) -> Unit) :
     override fun getItemCount() = listOfMenus.size
 
     data class MyMenu(
-        val image: Int, val title: String, val position: Int
+        val image: Int, val title: String, val position: Int, val menu: MyMenusName
     )
 
+    enum class MyMenusName {
+        CHARACTERS,
+        CLANS,
+        VILLAGES,
+        KEKKEIGENNKAY,
+        TAILED_BEASTS,
+        TEAMS,
+        AKATSUKI,
+        KARA
+    }
 
 }
