@@ -10,9 +10,9 @@ import com.example.domain.villages.Village
 import com.example.domain.villages.VillagesWithImages
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
 import com.example.presentation.extensions.loadImage
 import com.example.presentation.extensions.readRawJson
-import com.example.presentation.extensions.showLog
 
 
 class VillagesAdapter(private val clickOnVillage: (Village) -> Unit) :
@@ -42,6 +42,7 @@ class VillagesAdapter(private val clickOnVillage: (Village) -> Unit) :
             tvClan.text = village.name
             val villageImage = getImageVillage(village.name, itemView.context)
             imageCharacter.loadImage(urlImage = villageImage, imageOnError = R.drawable.villages)
+            root.click { clickOnVillage(village) }
         }
     }
 

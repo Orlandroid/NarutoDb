@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_villagesFragment"
             app:destination="@id/villagesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kekkeigenkaiFragment"
+            app:destination="@id/kekkeigenkaiFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -34,5 +37,19 @@
         android:id="@+id/villagesFragment"
         android:name="com.example.presentation.features.villages.VillagesFragment"
         android:label="VillagesFragment"
-        tools:layout="@layout/fragment_villages" />
+        tools:layout="@layout/fragment_villages">
+        <action
+            android:id="@+id/action_villagesFragment_to_villageDetailFragment"
+            app:destination="@id/villageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/villageDetailFragment"
+        android:name="com.example.presentation.features.villages.VillageDetailFragment"
+        android:label="VillageDetailFragment"
+        tools:layout="@layout/fragment_village_detail" />
+    <fragment
+        android:id="@+id/kekkeigenkaiFragment"
+        android:name="com.example.presentation.features.kekkeigenkai.KekkeigenkaiFragment"
+        android:label="KekkeigenkaiFragment"
+        tools:layout="@layout/fragment_kekkeigenkai" />
 </navigation>

@@ -30,7 +30,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 HomeAdapter.MyMenusName.KEKKEIGENNKAY -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.actionHomeFragmentToKekkeigenkaiFragment()
                 }
 
                 HomeAdapter.MyMenusName.TAILED_BEASTS -> {
