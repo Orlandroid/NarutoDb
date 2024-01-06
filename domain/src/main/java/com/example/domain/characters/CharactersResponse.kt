@@ -52,7 +52,7 @@ data class Family(
 
 @Serializable
 data class Personal(
-    @Serializable(UnwrappingJsonEnglishListSerializerV2::class)
+    @Serializable(UnwrappingJsonStringToListSerializerV2::class)
     val affiliation: List<String>? = null,
     val age: Age? = null,
     val birthdate: String? = null,
@@ -65,7 +65,7 @@ data class Personal(
     val partner: String? = null,
     val sex: String? = null,
     val status: String? = null,
-    @Serializable(UnwrappingJsonEnglishListSerializerV2::class)
+    @Serializable(UnwrappingJsonStringToListSerializerV2::class)
     val team: List<String>? = null,
     val titles: List<String>? = null,
     val weight: Weight? = null
@@ -78,9 +78,9 @@ data class Rank(
 
 @Serializable
 data class VoiceActors(
-    @Serializable(UnwrappingJsonEnglishListSerializerV2::class)
+    @Serializable(UnwrappingJsonStringToListSerializerV2::class)
     val english: List<String>? = null,
-    @Serializable(UnwrappingJsonEnglishListSerializerV2::class)
+    @Serializable(UnwrappingJsonStringToListSerializerV2::class)
     val japanese: List<String>? = null
 )
 

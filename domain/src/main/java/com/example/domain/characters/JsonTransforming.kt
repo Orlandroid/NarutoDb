@@ -4,14 +4,13 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.JsonTransformingSerializer
 import kotlinx.serialization.serializer
 
 
-object UnwrappingJsonEnglishListSerializerV2 :
+object UnwrappingJsonStringToListSerializerV2 :
     JsonTransformingSerializer<List<String>>(serializer()) {
     override fun transformDeserialize(element: JsonElement): JsonElement {
         if (element is JsonArray) return element

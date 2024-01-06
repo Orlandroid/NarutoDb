@@ -34,7 +34,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 HomeAdapter.MyMenusName.TAILED_BEASTS -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.actionHomeFragmentToTailedbeastsFragment()
                 }
 
                 HomeAdapter.MyMenusName.TEAMS -> {

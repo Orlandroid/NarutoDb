@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_kekkeigenkaiFragment"
             app:destination="@id/kekkeigenkaiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tailedbeastsFragment"
+            app:destination="@id/tailedbeastsFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -52,4 +55,9 @@
         android:name="com.example.presentation.features.kekkeigenkai.KekkeigenkaiFragment"
         android:label="KekkeigenkaiFragment"
         tools:layout="@layout/fragment_kekkeigenkai" />
+    <fragment
+        android:id="@+id/tailedbeastsFragment"
+        android:name="com.example.presentation.features.tailedbeasts.TailedbeastsFragment"
+        android:label="TailedbeastsFragment"
+        tools:layout="@layout/fragment_tailed_beast" />
 </navigation>
