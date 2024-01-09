@@ -4,9 +4,9 @@ import com.example.androidbase.presentation.room
 
 plugins {
     id("com.android.library")
-    id("kotlin-kapt")
-    id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.serialization")
+    kotlin("kapt")
+    kotlin("android")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -45,4 +45,5 @@ dependencies {
     room()
     implementation(Dependencies.RETROFIT_CONVERTER_GSON)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 }
