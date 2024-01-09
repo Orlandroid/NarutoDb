@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_teamsFragment"
             app:destination="@id/teamsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_akatsukiFragment"
+            app:destination="@id/akatsukiFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -68,4 +71,9 @@
         android:name="com.example.presentation.features.teams.TeamsFragment"
         android:label="TeamsFragment"
         tools:layout="@layout/fragment_teams" />
+    <fragment
+        android:id="@+id/akatsukiFragment"
+        android:name="com.example.presentation.features.akatsuki.AkatsukiFragment"
+        android:label="AkatsukiFragment"
+        tools:layout="@layout/fragment_akatsuki" />
 </navigation>

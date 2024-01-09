@@ -42,7 +42,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 HomeAdapter.MyMenusName.AKATSUKI -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.actionHomeFragmentToAkatsukiFragment()
                 }
 
                 HomeAdapter.MyMenusName.KARA -> {
