@@ -38,7 +38,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 HomeAdapter.MyMenusName.TEAMS -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.actionHomeFragmentToTeamsFragment()
                 }
 
                 HomeAdapter.MyMenusName.AKATSUKI -> {

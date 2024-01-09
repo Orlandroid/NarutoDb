@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_homeFragment_to_tailedbeastsFragment"
             app:destination="@id/tailedbeastsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_teamsFragment"
+            app:destination="@id/teamsFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -60,4 +63,9 @@
         android:name="com.example.presentation.features.tailedbeasts.TailedbeastsFragment"
         android:label="TailedbeastsFragment"
         tools:layout="@layout/fragment_tailed_beast" />
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.example.presentation.features.teams.TeamsFragment"
+        android:label="TeamsFragment"
+        tools:layout="@layout/fragment_teams" />
 </navigation>

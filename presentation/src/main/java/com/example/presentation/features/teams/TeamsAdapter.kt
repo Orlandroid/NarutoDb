@@ -1,19 +1,16 @@
-package com.example.presentation.features.clans
+package com.example.presentation.features.teams
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.data.clans.getImageFromClan
-import com.example.domain.clans.Clan
+import com.example.domain.teams.Team
 import com.example.presentation.databinding.ItemClanBinding
-import com.example.presentation.extensions.click
-import com.example.presentation.extensions.loadImage
 
 
-class ClansAdapter(private val clickOnCharacter: (Clan) -> Unit) :
-    PagingDataAdapter<Clan, ClansAdapter.CharacterViewHolder>(ClanComparator) {
+class TeamsAdapter(private val clickOnTeam: (Team) -> Unit) :
+    PagingDataAdapter<Team, TeamsAdapter.CharacterViewHolder>(TeamComparator) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
@@ -35,24 +32,21 @@ class ClansAdapter(private val clickOnCharacter: (Clan) -> Unit) :
 
     inner class CharacterViewHolder(private val binding: ItemClanBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(clan: Clan) = with(binding) {
-            root.click {
-                clickOnCharacter(clan)
-            }
-            tvClan.text = clan.name
-            val imageClan = getImageFromClan(clan.name)
-            imageCharacter.loadImage(imageClan)
+        fun bind(team: Team) = with(binding) {
+            tvClan.text = team.name
         }
     }
 
-    object ClanComparator : DiffUtil.ItemCallback<Clan>() {
-        override fun areItemsTheSame(oldItem: Clan, newItem: Clan): Boolean {
+
+    object TeamComparator : DiffUtil.ItemCallback<Team>() {
+        override fun areItemsTheSame(oldItem: Team, newItem: Team): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Clan, newItem: Clan): Boolean {
+        override fun areContentsTheSame(oldItem: Team, newItem: Team): Boolean {
             return oldItem == newItem
         }
+
     }
 
 

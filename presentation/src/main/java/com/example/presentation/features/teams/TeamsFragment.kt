@@ -1,23 +1,19 @@
-package com.example.presentation.features.villages
+package com.example.presentation.features.teams
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
-import com.example.domain.villages.Village
-import com.example.domain.villages.VillagesWithImages
+import com.example.domain.teams.Team
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
-import com.example.presentation.databinding.FragmentVillagesBinding
+import com.example.presentation.databinding.FragmentTeamsBinding
 import com.example.presentation.extensions.getError
-import com.example.presentation.extensions.gone
-import com.example.presentation.extensions.readRawJson
+import com.example.presentation.extensions.hideProgress
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
-import com.example.presentation.extensions.showLog
-import com.example.presentation.extensions.visible
+import com.example.presentation.extensions.showProgress
 import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -25,36 +21,27 @@ import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
-class VillagesFragment : BaseFragment<FragmentVillagesBinding>(R.layout.fragment_villages) {
-
-
-    private val viewModel: VillagesViewModel by viewModels()
-    private val adapter = VillagesAdapter { clickOnVillage(it) }
+class TeamsFragment : BaseFragment<FragmentTeamsBinding>(R.layout.fragment_teams) {
+    private val viewModel: TeamsViewModel by viewModels()
+    private val adapter = TeamsAdapter { clickOnTeam(it) }
     override fun configureToolbar() = MainActivity.ToolbarConfiguration(
         showToolbar = true,
-        toolbarTitle = getString(R.string.villages)
+        toolbarTitle = getString(R.string.teams)
     )
 
     override fun setUpUi() = with(binding) {
         recycler.adapter = adapter
-        getVillages()
+        getTeams()
         listenerAdapter()
     }
 
-    private fun getVillagesImages() {
-        readRawJson<List<VillagesWithImages>>(R.raw.villages).forEach {
-            showLog(it.name)
-        }
+    private fun clickOnTeam(team: Team) {
     }
 
-    private fun clickOnVillage(clickOnVillage: Village) {
-        findNavController().navigate(VillagesFragmentDirections.actionVillagesFragmentToVillageDetailFragment())
-    }
-
-    private fun getVillages() {
+    private fun getTeams() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.getCharactersPagingSource.collectLatest { characters ->
+                viewModel.getTeamsPagingSource.collectLatest { characters ->
                     adapter.submitData(lifecycle, characters)
                 }
             }
@@ -66,9 +53,9 @@ class VillagesFragment : BaseFragment<FragmentVillagesBinding>(R.layout.fragment
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 adapter.addLoadStateListener { loadState ->
                     if (loadState.source.append is LoadState.Loading || loadState.source.refresh is LoadState.Loading) {
-                        binding.progress.progressBar.visible()
+                        showProgress()
                     } else {
-                        binding.progress.progressBar.gone()
+                        hideProgress()
                     }
                     val errorState = loadState.getError()
                     errorState?.showError {

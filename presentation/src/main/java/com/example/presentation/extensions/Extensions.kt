@@ -17,7 +17,6 @@ import androidx.core.graphics.drawable.DrawableCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.presentation.R
-import java.lang.Error
 
 
 fun Activity.hideKeyboard() {

@@ -11,10 +11,8 @@ import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentKekkeigenkaiBinding
 import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
-import com.example.presentation.extensions.hideProgress
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
-import com.example.presentation.extensions.showProgress
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
