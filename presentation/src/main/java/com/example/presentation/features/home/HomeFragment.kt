@@ -46,7 +46,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 HomeAdapter.MyMenusName.KARA -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.actionHomeFragmentToKaraFragment()
                 }
             }
         )

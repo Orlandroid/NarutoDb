@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment_to_akatsukiFragment"
             app:destination="@id/akatsukiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_karaFragment"
+            app:destination="@id/karaFragment" />
     </fragment>
     <fragment
         android:id="@+id/charactersFragment"
@@ -76,4 +79,9 @@
         android:name="com.example.presentation.features.akatsuki.AkatsukiFragment"
         android:label="AkatsukiFragment"
         tools:layout="@layout/fragment_akatsuki" />
+    <fragment
+        android:id="@+id/karaFragment"
+        android:name="com.example.presentation.features.kara.KaraFragment"
+        android:label="KaraFragment"
+        tools:layout="@layout/fragment_kara" />
 </navigation>

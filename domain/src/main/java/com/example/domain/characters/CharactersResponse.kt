@@ -2,9 +2,11 @@ package com.example.domain.characters
 
 import com.example.domain.common.Debut
 import com.example.domain.common.Family
+import com.example.domain.common.Personal
 import com.example.domain.common.VoiceActors
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
 @Serializable
 data class CharactersResponse(
@@ -23,7 +25,7 @@ data class Character(
     val jutsu: List<String>? = null,
     val name: String,
     val natureType: List<String>? = null,
-    //val personal: Personal? = null,
+    val personal: Personal? = null,
     val rank: Rank? = null,
     val tools: List<String>? = null,
     val voiceActors: VoiceActors? = null
@@ -31,11 +33,9 @@ data class Character(
 
 @Serializable
 data class Rank(
-    val ninjaRank: NinjaRank? = null, val ninjaRegistration: String? = null
+    val ninjaRank: NinjaRank? = null,
+    val ninjaRegistration: String? = null,
 )
-
-
-
 
 @Serializable
 data class Age(

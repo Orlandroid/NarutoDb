@@ -13,7 +13,7 @@ interface CharactersApi {
     @GET("character")
     suspend fun getAllCharacters(
         @Query("page") page: String,
-        @Query("limit") limit: String = "10"
+        @Query("limit") limit: String = "15"
     ): CharactersResponse
 
     @GET("character/{id}")
