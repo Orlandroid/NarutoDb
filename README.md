@@ -9,10 +9,10 @@
     <td><strong>Villages</strong></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/home.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/caracteres.jpg" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/episodes.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/detalle.png" width="100%"></td> 
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Home.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Clans.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Villages.png" width="100%"></td> 
   </tr>
   
   
@@ -23,16 +23,16 @@
     <td><strong>Akatsuki</strong></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/detalle_2.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/detalle_3.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/episode_detail.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/locations.png" width="100%"></td> 
+   <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td> 
   </tr>
    <tr>
     <td><strong>kara</strong></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/Orlandroid/images_for_repos/blob/main/rick/location_detail.jpg" width="100%"></td>
+   <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
   </tr>
   
 </table>
