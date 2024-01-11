@@ -17,6 +17,7 @@ import com.example.presentation.extensions.readRawJson
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
 import com.example.presentation.extensions.showLog
+import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -41,14 +42,12 @@ class VillagesFragment : BaseFragment<FragmentVillagesBinding>(R.layout.fragment
         listenerAdapter()
     }
 
-    private fun getVillagesImages() {
-        readRawJson<List<VillagesWithImages>>(R.raw.villages).forEach {
-            showLog(it.name)
-        }
-    }
-
-    private fun clickOnVillage(clickOnVillage: Village) {
-        findNavController().navigate(VillagesFragmentDirections.actionVillagesFragmentToVillageDetailFragment())
+    private fun clickOnVillage(village: Village) {
+        findNavController().navigate(
+            VillagesFragmentDirections.actionVillagesFragmentToVillageDetailFragment(
+                village.toJson()
+            )
+        )
     }
 
     private fun getVillages() {

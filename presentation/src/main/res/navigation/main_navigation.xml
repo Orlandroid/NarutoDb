@@ -58,7 +58,11 @@
         android:id="@+id/villageDetailFragment"
         android:name="com.example.presentation.features.villages.VillageDetailFragment"
         android:label="VillageDetailFragment"
-        tools:layout="@layout/fragment_village_detail" />
+        tools:layout="@layout/fragment_village_detail" >
+        <argument
+            android:name="village"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/kekkeigenkaiFragment"
         android:name="com.example.presentation.features.kekkeigenkai.KekkeigenkaiFragment"

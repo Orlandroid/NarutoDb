@@ -1,4 +1,4 @@
-package com.example.domain.characters
+package com.example.domain.common
 
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.serializer
@@ -7,6 +7,8 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.JsonTransformingSerializer
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.serializer
 
 
@@ -42,3 +44,6 @@ object UnwrappingJsonOccupationListSerializer :
             )
         }
 }
+
+
+

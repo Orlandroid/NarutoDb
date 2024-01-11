@@ -2,8 +2,6 @@ package com.example.domain.common
 
 import com.example.domain.characters.Age
 import com.example.domain.characters.Height
-import com.example.domain.characters.UnwrappingJsonOccupationListSerializer
-import com.example.domain.characters.UnwrappingJsonStringToListSerializerV2
 import com.example.domain.characters.Weight
 import kotlinx.serialization.Serializable
 

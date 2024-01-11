@@ -21,7 +21,7 @@ data class Akatsuki(
     val jutsu: List<String>? = null,
     val name: String,
     val natureType: List<String>? = null,
-    val personal: Personal,
+    val personal: Personal? = null,
     val uniqueTraits: List<String>? = null,
     val voiceActors: VoiceActors? = null
 )

@@ -1,6 +1,5 @@
 package com.example.domain.common
 
-import com.example.domain.characters.UnwrappingJsonStringToListSerializerV2
 import kotlinx.serialization.Serializable
 
 @Serializable
