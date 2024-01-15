@@ -6,7 +6,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.kara.Kara
+import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.loadImage
 
 
 class KaraAdapter(private val clickOnKara: (Kara) -> Unit) :
@@ -34,6 +36,11 @@ class KaraAdapter(private val clickOnKara: (Kara) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(kara: Kara) = with(binding) {
             tvClan.text = kara.name
+            if (kara.images.isNotEmpty()) {
+                imageCharacter.loadImage(kara.images[0], R.drawable.kara)
+            } else {
+                imageCharacter.loadImage(R.drawable.kara)
+            }
         }
     }
 

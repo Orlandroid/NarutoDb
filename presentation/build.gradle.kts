@@ -78,5 +78,4 @@ dependencies {
     implementation(Dependencies.PAGING)
     //implementation("com.github.Spikeysanju:MotionToast:1.4")
     implementation("io.coil-kt:coil:2.5.0")
-
 }

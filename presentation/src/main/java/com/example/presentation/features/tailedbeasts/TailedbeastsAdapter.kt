@@ -1,16 +1,14 @@
 package com.example.presentation.features.tailedbeasts
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.tailedbeasts.TailedBeast
-import com.example.domain.villages.VillagesWithImages
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
-import com.example.presentation.extensions.readRawJson
+import com.example.presentation.extensions.loadImage
 
 
 class TailedbeastsAdapter(private val clickOnTailedBeast: (TailedBeast) -> Unit) :
@@ -38,16 +36,12 @@ class TailedbeastsAdapter(private val clickOnTailedBeast: (TailedBeast) -> Unit)
         RecyclerView.ViewHolder(binding.root) {
         fun bind(tailedBeast: TailedBeast) = with(binding) {
             tvClan.text = tailedBeast.name
-        }
-    }
-
-    fun getImageVillage(villageName: String, context: Context): String {
-        context.readRawJson<List<VillagesWithImages>>(R.raw.villages).forEach {
-            if (it.name == villageName) {
-                return it.image
+            if (tailedBeast.images.isNotEmpty()) {
+                imageCharacter.loadImage(tailedBeast.images[0], R.drawable.tailedbeasts)
+            } else {
+                imageCharacter.loadImage(R.drawable.tailedbeasts)
             }
         }
-        return ""
     }
 
     object VillageComparator : DiffUtil.ItemCallback<TailedBeast>() {

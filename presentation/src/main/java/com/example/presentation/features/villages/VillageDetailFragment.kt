@@ -1,6 +1,7 @@
 package com.example.presentation.features.villages
 
 import android.content.Context
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.domain.villages.Village
 import com.example.domain.villages.VillagesWithImages
@@ -8,6 +9,7 @@ import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentVillageDetailBinding
 import com.example.presentation.extensions.changeToolbarTitle
+import com.example.presentation.extensions.click
 import com.example.presentation.extensions.fromJson
 import com.example.presentation.extensions.loadImage
 import com.example.presentation.extensions.readRawJson
@@ -33,6 +35,13 @@ class VillageDetailFragment :
                     imageOnError = R.drawable.villages
                 )
                 binding.tvDescription.text = village.description
+                binding.imageVillage.click {
+                    findNavController().navigate(
+                        VillageDetailFragmentDirections.navigationToImageViewVer(
+                            village.image
+                        )
+                    )
+                }
             }
             changeToolbarTitle(it.name)
         }

@@ -5,6 +5,10 @@
     android:id="@+id/main_navigation"
     app:startDestination="@id/homeFragment">
 
+    <action
+        android:id="@+id/navigation_to_image_view_ver"
+        app:destination="@id/imageViewVerFragment" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.presentation.features.home.HomeFragment"
@@ -58,7 +62,7 @@
         android:id="@+id/villageDetailFragment"
         android:name="com.example.presentation.features.villages.VillageDetailFragment"
         android:label="VillageDetailFragment"
-        tools:layout="@layout/fragment_village_detail" >
+        tools:layout="@layout/fragment_village_detail">
         <argument
             android:name="village"
             app:argType="string" />
@@ -88,4 +92,13 @@
         android:name="com.example.presentation.features.kara.KaraFragment"
         android:label="KaraFragment"
         tools:layout="@layout/fragment_kara" />
+    <fragment
+        android:id="@+id/imageViewVerFragment"
+        android:name="com.example.presentation.features.imageViever.ImageViewVerFragment"
+        android:label="ImageViewVerFragment"
+        tools:layout="@layout/fragment_image_view_ver" >
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+    </fragment>
 </navigation>

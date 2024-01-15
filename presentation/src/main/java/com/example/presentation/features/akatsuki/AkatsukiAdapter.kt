@@ -6,7 +6,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.akatsuki.Akatsuki
+import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.loadImage
 
 
 class AkatsukiAdapter(private val clickOnAkatsuki: (Akatsuki) -> Unit) :
@@ -34,6 +36,11 @@ class AkatsukiAdapter(private val clickOnAkatsuki: (Akatsuki) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(akatsuki: Akatsuki) = with(binding) {
             tvClan.text = akatsuki.name
+            if (akatsuki.images.isNotEmpty()) {
+                imageCharacter.loadImage(akatsuki.images[0], R.drawable.akatsuki)
+            } else {
+                imageCharacter.loadImage(R.drawable.akatsuki)
+            }
         }
     }
 

@@ -32,7 +32,7 @@ fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
-fun ImageView.loadImage(urlImage: String, @DrawableRes imageOnError: Int? = null) {
+fun ImageView.loadImage(urlImage: Any, @DrawableRes imageOnError: Int? = null) {
     if (imageOnError == null) {
         Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
             .error(R.drawable.clans)
