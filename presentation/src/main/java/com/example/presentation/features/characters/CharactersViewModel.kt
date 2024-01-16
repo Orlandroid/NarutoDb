@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CharactersViewModel @Inject constructor(
-    private val service: CharactersApi,
+    private val charactersApi: CharactersApi,
     coroutineDispatchers: CoroutineDispatchers,
     networkHelper: NetworkHelper
 ) : BaseViewModel(coroutineDispatchers, networkHelper) {
@@ -29,7 +29,10 @@ class CharactersViewModel @Inject constructor(
         Pager(
             config = getPagingConfig(),
             pagingSourceFactory = {
-                charactersPagingSource = CharactersPagingSource(service = service)
+                charactersPagingSource =
+                    CharactersPagingSource(
+                        charactersApi = charactersApi
+                    )
                 charactersPagingSource
             }
         ).flow.cachedIn(viewModelScope)

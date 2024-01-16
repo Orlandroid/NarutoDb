@@ -4,6 +4,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentHomeBinding
+import com.example.presentation.extensions.toJson
+import com.example.presentation.features.characters.CharactersFragment
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
@@ -18,7 +20,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         findNavController().navigate(
             when (menu.menu) {
                 HomeAdapter.MyMenusName.CHARACTERS -> {
-                    HomeFragmentDirections.actionHomeFragmentToCharactersFragment()
+                    HomeFragmentDirections.navigationToCharactersFragment(
+                        CharactersFragment.MyCharacters(
+                            emptyList()
+                        ).toJson()
+                    )
                 }
 
                 HomeAdapter.MyMenusName.CLANS -> {

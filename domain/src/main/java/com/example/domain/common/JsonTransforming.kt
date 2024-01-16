@@ -1,5 +1,6 @@
 package com.example.domain.common
 
+import com.example.domain.characters.Rank
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.JsonArray
@@ -7,8 +8,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.JsonTransformingSerializer
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.serializer
 
 
@@ -17,6 +17,20 @@ object UnwrappingJsonStringToListSerializerV2 :
     override fun transformDeserialize(element: JsonElement): JsonElement {
         if (element is JsonArray) return element
         return JsonArray(listOf(element))
+    }
+}
+
+//* return an empty object when we get response like the next example
+// Example
+// *  "rank": [  "The Springtime of Youth wiki has an article about this topic:", "Homura Mitokado"]
+
+object UnwrappingJsonReturnEmptyObject :
+    JsonTransformingSerializer<Rank>(serializer()) {
+    override fun transformDeserialize(element: JsonElement): JsonElement {
+        if (element is JsonObject) return element
+        return buildJsonObject {
+
+        }
     }
 }
 

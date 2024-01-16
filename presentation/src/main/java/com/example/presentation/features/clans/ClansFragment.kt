@@ -4,6 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
@@ -12,8 +13,10 @@ import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
+import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
+import com.example.presentation.features.characters.CharactersFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -27,7 +30,14 @@ class ClansFragment : BaseFragment<FragmentClansBinding>(R.layout.fragment_clans
     )
 
     private val viewModel: ClansViewModel by viewModels()
-    private val adapter = ClansAdapter {}
+    private val adapter = ClansAdapter {
+        findNavController().navigate(
+            ClansFragmentDirections.navigationToCharactersFragment(
+                CharactersFragment.MyCharacters(it.characters).toJson()
+            )
+        )
+    }
+
     override fun setUpUi() = with(binding) {
         recycler.adapter = adapter
         getCharacters()

@@ -1,5 +1,6 @@
 package com.example.domain.teams
 
+import com.example.domain.characters.Character
 import kotlinx.serialization.Serializable
 
 
@@ -13,4 +14,5 @@ data class TeamsResponse(
 data class Team(
     val id: Int,
     val name: String,
+    val characters: List<Character>
 )

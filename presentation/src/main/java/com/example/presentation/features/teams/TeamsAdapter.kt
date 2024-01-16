@@ -6,7 +6,10 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.teams.Team
+import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
+import com.example.presentation.extensions.loadImage
 
 
 class TeamsAdapter(private val clickOnTeam: (Team) -> Unit) :
@@ -34,6 +37,10 @@ class TeamsAdapter(private val clickOnTeam: (Team) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(team: Team) = with(binding) {
             tvClan.text = team.name
+            imageCharacter.loadImage(R.drawable.teams)
+            root.click {
+                clickOnTeam(team)
+            }
         }
     }
 

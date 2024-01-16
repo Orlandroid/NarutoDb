@@ -8,15 +8,15 @@
     <action
         android:id="@+id/navigation_to_image_view_ver"
         app:destination="@id/imageViewVerFragment" />
+    <action
+        android:id="@+id/navigation_to_characters_fragment"
+        app:destination="@id/charactersFragment" />
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.presentation.features.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_charactersFragment"
-            app:destination="@id/charactersFragment" />
         <action
             android:id="@+id/action_homeFragment_to_clansFragment"
             app:destination="@id/clansFragment" />
@@ -43,7 +43,11 @@
         android:id="@+id/charactersFragment"
         android:name="com.example.presentation.features.characters.CharactersFragment"
         android:label="CharactersFragment"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_characters" >
+        <argument
+            android:name="myCharacters"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/clansFragment"
         android:name="com.example.presentation.features.clans.ClansFragment"

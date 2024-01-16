@@ -4,6 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.domain.kekkeigenkai.Kekkeigenkai
 import com.example.presentation.R
@@ -13,8 +14,10 @@ import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
+import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
+import com.example.presentation.features.characters.CharactersFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -27,8 +30,7 @@ class KekkeigenkaiFragment :
     private val viewModel: KekkeigenkaiViewModel by viewModels()
     private val adapter = KekkeigenkaiAdapter { clickOnKekkeigenkai(it) }
     override fun configureToolbar() = MainActivity.ToolbarConfiguration(
-        showToolbar = true,
-        toolbarTitle = getString(R.string.kekkeigenkai)
+        showToolbar = true, toolbarTitle = getString(R.string.kekkeigenkai)
     )
 
     override fun setUpUi() = with(binding) {
@@ -38,7 +40,11 @@ class KekkeigenkaiFragment :
     }
 
     private fun clickOnKekkeigenkai(kekkeigenkai: Kekkeigenkai) {
-
+        findNavController().navigate(
+            KekkeigenkaiFragmentDirections.navigationToCharactersFragment(
+                CharactersFragment.MyCharacters(kekkeigenkai.characters).toJson()
+            )
+        )
     }
 
     private fun getVillages() {

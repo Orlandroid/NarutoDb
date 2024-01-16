@@ -3,6 +3,7 @@ package com.example.domain.characters
 import com.example.domain.common.Debut
 import com.example.domain.common.Family
 import com.example.domain.common.Personal
+import com.example.domain.common.UnwrappingJsonReturnEmptyObject
 import com.example.domain.common.VoiceActors
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -25,9 +26,10 @@ data class Character(
     val name: String,
     val natureType: List<String>? = null,
     //val personal: Personal? = null,
+    @Serializable(UnwrappingJsonReturnEmptyObject::class)
     val rank: Rank? = null,
     val tools: List<String>? = null,
-    val voiceActors: VoiceActors? = null
+    //val voiceActors: VoiceActors? = null
 )
 
 @Serializable

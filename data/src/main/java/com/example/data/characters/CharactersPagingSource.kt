@@ -7,7 +7,7 @@ import retrofit2.HttpException
 
 
 class CharactersPagingSource(
-    private val service: CharactersApi
+    private val charactersApi: CharactersApi
 ) : PagingSource<Int, Character>() {
 
     companion object {
@@ -19,11 +19,11 @@ class CharactersPagingSource(
     ): LoadResult<Int, Character> {
         return try {
             val currentPage = params.key ?: START_PAGE
-            val data = service.getAllCharacters(page = currentPage.toString())
+            val data = charactersApi.getAllCharacters(page = currentPage.toString()).characters
             LoadResult.Page(
-                data = data.characters,
+                data = data,
                 prevKey = if (currentPage == START_PAGE) null else currentPage - 1,
-                nextKey = if (data.characters.isEmpty()) null else currentPage.plus(1)
+                nextKey = if (data.isEmpty()) null else currentPage.plus(1)
             )
         } catch (e: Exception) {
             println(e.message)

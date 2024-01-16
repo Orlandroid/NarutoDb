@@ -1,5 +1,6 @@
 package com.example.domain.kekkeigenkai
 
+import com.example.domain.characters.Character
 import kotlinx.serialization.Serializable
 
 
@@ -11,5 +12,6 @@ data class KekkeigenkaiResponse(
 @Serializable
 data class Kekkeigenkai(
     val id: Int,
-    val name: String
+    val name: String,
+    val characters: List<Character>
 )

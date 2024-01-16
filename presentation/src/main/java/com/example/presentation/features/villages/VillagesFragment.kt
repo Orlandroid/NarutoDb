@@ -7,16 +7,13 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.domain.villages.Village
-import com.example.domain.villages.VillagesWithImages
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentVillagesBinding
 import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
-import com.example.presentation.extensions.readRawJson
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
-import com.example.presentation.extensions.showLog
 import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity

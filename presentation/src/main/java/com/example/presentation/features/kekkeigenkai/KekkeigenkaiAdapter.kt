@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.kekkeigenkai.Kekkeigenkai
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
 
 
 class KekkeigenkaiAdapter(private val clickOnKekkeigenkai: (Kekkeigenkai) -> Unit) :
@@ -34,6 +35,9 @@ class KekkeigenkaiAdapter(private val clickOnKekkeigenkai: (Kekkeigenkai) -> Uni
         RecyclerView.ViewHolder(binding.root) {
         fun bind(kekkeigenkai: Kekkeigenkai) = with(binding) {
             tvClan.text = kekkeigenkai.name
+            binding.root.click {
+                clickOnKekkeigenkai(kekkeigenkai)
+            }
         }
     }
 
