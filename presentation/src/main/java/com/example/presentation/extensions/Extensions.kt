@@ -5,9 +5,11 @@ import android.content.Context
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.text.Html
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
@@ -35,10 +37,12 @@ fun Context.showToast(message: String) {
 fun ImageView.loadImage(urlImage: Any, @DrawableRes imageOnError: Int? = null) {
     if (imageOnError == null) {
         Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
+            .placeholder(R.drawable.loading_animation)
             .error(R.drawable.clans)
             .into(this)
     } else {
         Glide.with(context).load(urlImage).transition(DrawableTransitionOptions.withCrossFade())
+            .placeholder(R.drawable.loading_animation)
             .error(imageOnError)
             .error(R.drawable.clans)
             .into(this)
@@ -54,6 +58,14 @@ fun ImageView.setColorFilterImage(context: Context, @ColorRes colorInt: Int) {
 @RequiresApi(Build.VERSION_CODES.M)
 fun Drawable.tint(context: Context, @ColorRes color: Int) {
     DrawableCompat.setTint(this, context.resources.getColor(color, context.theme))
+}
+
+fun TextView.setTextFromHtml(textHtml: String) {
+    text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        Html.fromHtml(textHtml, Html.FROM_HTML_MODE_COMPACT)
+    } else {
+        Html.fromHtml(textHtml)
+    }
 }
 
 

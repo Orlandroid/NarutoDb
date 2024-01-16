@@ -12,7 +12,8 @@ data class Personal(
     val age: Age? = null,
     val birthdate: String? = null,
     val bloodType: String? = null,
-    val clan: String? = null,
+    @Serializable(UnwrappingJsonStringToListSerializerV2::class)
+    val clan: List<String>? = null,
     @Serializable(UnwrappingJsonStringToListSerializerV2::class)
     val classification: List<String>? = null,
     val height: Height? = null,

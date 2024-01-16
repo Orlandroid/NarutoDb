@@ -4,6 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.paging.LoadState
 import androidx.paging.PagingData
@@ -16,6 +17,7 @@ import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
+import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,7 +34,11 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>(R.layout.frag
 
     private val viewModel: CharactersViewModel by viewModels()
     private val adapter = CharacterAdapter {
-        //go to character detail also it is gonna be a general fragment because we are gonna have the posibilite no navigate to that view from another fragments
+        findNavController().navigate(
+            CharactersFragmentDirections.actionCharactersFragmentToCharacterDetailFragment(
+                it.toJson()
+            )
+        )
     }
 
     data class MyCharacters(

@@ -34,6 +34,16 @@ object UnwrappingJsonReturnEmptyObject :
     }
 }
 
+object UnwrappingJsonReturnEmptyObjectPersonal :
+    JsonTransformingSerializer<Personal>(serializer()) {
+    override fun transformDeserialize(element: JsonElement): JsonElement {
+        if (element is JsonObject) return element
+        return buildJsonObject {
+
+        }
+    }
+}
+
 object UnwrappingJsonOccupationListSerializer :
     JsonTransformingSerializer<List<String>>(ListSerializer(String.serializer())) {
     override fun transformDeserialize(element: JsonElement) =

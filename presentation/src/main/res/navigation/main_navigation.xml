@@ -43,10 +43,13 @@
         android:id="@+id/charactersFragment"
         android:name="com.example.presentation.features.characters.CharactersFragment"
         android:label="CharactersFragment"
-        tools:layout="@layout/fragment_characters" >
+        tools:layout="@layout/fragment_characters">
         <argument
             android:name="myCharacters"
             app:argType="string" />
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/clansFragment"
@@ -100,9 +103,18 @@
         android:id="@+id/imageViewVerFragment"
         android:name="com.example.presentation.features.imageViever.ImageViewVerFragment"
         android:label="ImageViewVerFragment"
-        tools:layout="@layout/fragment_image_view_ver" >
+        tools:layout="@layout/fragment_image_view_ver">
         <argument
             android:name="imageUrl"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.example.presentation.features.characters.CharacterDetailFragment"
+        android:label="CharacterDetailFragment"
+        tools:layout="@layout/fragment_character_detail" >
+        <argument
+            android:name="character"
             app:argType="string" />
     </fragment>
 </navigation>

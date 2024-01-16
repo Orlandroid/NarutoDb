@@ -4,7 +4,7 @@ import com.example.domain.common.Debut
 import com.example.domain.common.Family
 import com.example.domain.common.Personal
 import com.example.domain.common.UnwrappingJsonReturnEmptyObject
-import com.example.domain.common.VoiceActors
+import com.example.domain.common.UnwrappingJsonReturnEmptyObjectPersonal
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -25,7 +25,8 @@ data class Character(
     val jutsu: List<String>? = null,
     val name: String,
     val natureType: List<String>? = null,
-    //val personal: Personal? = null,
+    @Serializable(UnwrappingJsonReturnEmptyObjectPersonal::class)
+    val personal: Personal? = null,
     @Serializable(UnwrappingJsonReturnEmptyObject::class)
     val rank: Rank? = null,
     val tools: List<String>? = null,
@@ -44,7 +45,23 @@ data class Age(
     @SerialName("Chunin Promotion") val chuninPromotion: String? = null,
     @SerialName("Part I") val partI: String? = null,
     @SerialName("Part II") val partII: String? = null
-)
+) {
+    fun getAge(): String? {
+        academyGraduate?.let {
+            return it
+        }
+        chuninPromotion?.let {
+            return it
+        }
+        partI?.let {
+            return it
+        }
+        partII?.let {
+            return it
+        }
+        return null
+    }
+}
 
 @Serializable
 data class Height(
