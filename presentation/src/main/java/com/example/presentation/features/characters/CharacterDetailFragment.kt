@@ -8,7 +8,6 @@ import com.example.presentation.databinding.FragmentCharacterDetailBinding
 import com.example.presentation.extensions.fromJson
 import com.example.presentation.extensions.loadImage
 import com.example.presentation.extensions.setTextFromHtml
-import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
 

@@ -1,5 +1,6 @@
 package com.example.presentation.alerts
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.*
@@ -93,6 +94,7 @@ class MainAlert(
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setKindOfMessage() {
         when (kindOfMessage) {
             0 -> {
