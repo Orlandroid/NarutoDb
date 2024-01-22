@@ -24,15 +24,19 @@
   </tr>
   <tr>
    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
-    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td> 
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/tailed_beasts.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/teams.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/akatsuki.png" width="100%"></td> 
   </tr>
    <tr>
     <td><strong>kara</strong></td>
+     <td><strong>Character Detail</strong></td>
+     <td><strong>Village Detail</strong></td>
   </tr>
   <tr>
-   <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/Characteres.png" width="100%"></td>
+   <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/kara.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/character_detail.png" width="100%"></td>
+    <td><img src="https://github.com/Orlandroid/Resources_Repos/blob/main/narutoDb/village_detail.png" width="100%"></td>
   </tr>
   
 </table>
