@@ -6,7 +6,7 @@ import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentCharacterDetailBinding
 import com.example.presentation.extensions.fromJson
-import com.example.presentation.extensions.loadImage
+import com.example.presentation.extensions.loadImageCircularProgress
 import com.example.presentation.extensions.setTextFromHtml
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
@@ -27,8 +27,8 @@ class CharacterDetailFragment :
 
     private fun bind(character: Character) = with(binding) {
         if (character.images.isNotEmpty()) {
-            binding.imageCharacter.loadImage(
-                urlImage = character.images[0],
+            binding.imageCharacter.loadImageCircularProgress(
+                url = character.images[0],
                 imageOnError = R.drawable.characters
             )
         }

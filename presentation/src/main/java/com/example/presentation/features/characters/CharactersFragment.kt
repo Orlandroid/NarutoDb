@@ -35,7 +35,7 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>(R.layout.frag
     private val viewModel: CharactersViewModel by viewModels()
     private val adapter = CharacterAdapter {
         findNavController().navigate(
-            CharactersFragmentDirections.actionCharactersFragmentToCharacterDetailFragment(
+            CharactersFragmentDirections.navigationToCharactersDetailFragment(
                 it.toJson()
             )
         )

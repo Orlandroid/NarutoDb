@@ -12,6 +12,7 @@ import com.example.presentation.extensions.changeToolbarTitle
 import com.example.presentation.extensions.click
 import com.example.presentation.extensions.fromJson
 import com.example.presentation.extensions.loadImage
+import com.example.presentation.extensions.loadImageCircularProgress
 import com.example.presentation.extensions.readRawJson
 import com.example.presentation.features.MainActivity
 
@@ -30,8 +31,8 @@ class VillageDetailFragment :
         args.village.fromJson<Village>().let {
             val villageImage = getVillage(it.name, requireContext())
             villageImage?.let { village ->
-                binding.imageVillage.loadImage(
-                    urlImage = villageImage.image,
+                binding.imageVillage.loadImageCircularProgress(
+                    url = villageImage.image,
                     imageOnError = R.drawable.villages
                 )
                 binding.tvDescription.text = village.description

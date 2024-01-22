@@ -16,6 +16,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.presentation.R
@@ -48,6 +49,19 @@ fun ImageView.loadImage(urlImage: Any, @DrawableRes imageOnError: Int? = null) {
             .into(this)
     }
 }
+
+
+fun ImageView.loadImageCircularProgress(url: String?, @DrawableRes imageOnError: Int? = null) {
+    url?.let {
+        val circularProgressDrawable = CircularProgressDrawable(this.context)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
+        Glide.with(this.context).load(url).placeholder(circularProgressDrawable)
+            .error(imageOnError).into(this)
+    }
+}
+
 
 fun ImageView.setColorFilterImage(context: Context, @ColorRes colorInt: Int) {
     this.setColorFilter(

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.tailedbeasts.TailedBeast
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
 import com.example.presentation.extensions.loadImage
 
 
@@ -40,6 +41,9 @@ class TailedbeastsAdapter(private val clickOnTailedBeast: (TailedBeast) -> Unit)
                 imageCharacter.loadImage(tailedBeast.images[0], R.drawable.tailedbeasts)
             } else {
                 imageCharacter.loadImage(R.drawable.tailedbeasts)
+            }
+            root.click {
+                clickOnTailedBeast(tailedBeast)
             }
         }
     }
