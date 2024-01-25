@@ -1,10 +1,6 @@
 package com.example.domain.characters
 
-import com.example.domain.common.Debut
-import com.example.domain.common.Family
-import com.example.domain.common.Personal
-import com.example.domain.common.UnwrappingJsonReturnEmptyObject
-import com.example.domain.common.UnwrappingJsonReturnEmptyObjectPersonal
+import com.example.domain.common.Character
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -14,23 +10,6 @@ data class CharactersResponse(
     val currentPage: Int,
     val pageSize: Int,
     val totalCharacters: Int
-)
-
-@Serializable
-data class Character(
-    val debut: Debut? = null,
-    val family: Family? = null,
-    val id: Int,
-    val images: List<String> = emptyList(),
-    val jutsu: List<String>? = null,
-    val name: String,
-    val natureType: List<String>? = null,
-    @Serializable(UnwrappingJsonReturnEmptyObjectPersonal::class)
-    val personal: Personal? = null,
-    @Serializable(UnwrappingJsonReturnEmptyObject::class)
-    val rank: Rank? = null,
-    val tools: List<String>? = null,
-    //val voiceActors: VoiceActors? = null
 )
 
 @Serializable

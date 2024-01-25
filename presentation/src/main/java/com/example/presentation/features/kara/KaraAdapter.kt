@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.kara.Kara
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
 import com.example.presentation.extensions.loadImage
 
 
@@ -40,6 +41,9 @@ class KaraAdapter(private val clickOnKara: (Kara) -> Unit) :
                 imageCharacter.loadImage(kara.images[0], R.drawable.kara)
             } else {
                 imageCharacter.loadImage(R.drawable.kara)
+            }
+            root.click {
+                clickOnKara.invoke(kara)
             }
         }
     }

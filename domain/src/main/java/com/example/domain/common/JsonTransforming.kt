@@ -14,10 +14,17 @@ import kotlinx.serialization.serializer
 
 object UnwrappingJsonStringToListSerializerV2 :
     JsonTransformingSerializer<List<String>>(serializer()) {
-    override fun transformDeserialize(element: JsonElement): JsonElement {
-        if (element is JsonArray) return element
-        return JsonArray(listOf(element))
-    }
+    override fun transformDeserialize(element: JsonElement): JsonElement =
+        if (element !is JsonArray) JsonArray(listOf(element)) else element
+
+}
+
+object UnwrappingJsonStringToListSerializerV3 :
+    JsonTransformingSerializer<String>(serializer()) {
+    override fun transformDeserialize(element: JsonElement): JsonElement =
+        if (element is JsonArray) element.first()
+        else element
+
 }
 
 //* return an empty object when we get response like the next example

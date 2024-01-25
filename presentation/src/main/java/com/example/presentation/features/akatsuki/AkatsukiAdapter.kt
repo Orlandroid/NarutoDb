@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.akatsuki.Akatsuki
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemClanBinding
+import com.example.presentation.extensions.click
 import com.example.presentation.extensions.loadImage
 
 
@@ -40,6 +41,9 @@ class AkatsukiAdapter(private val clickOnAkatsuki: (Akatsuki) -> Unit) :
                 imageCharacter.loadImage(akatsuki.images[0], R.drawable.akatsuki)
             } else {
                 imageCharacter.loadImage(R.drawable.akatsuki)
+            }
+            root.click {
+                clickOnAkatsuki(akatsuki)
             }
         }
     }

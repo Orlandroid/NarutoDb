@@ -1,6 +1,7 @@
 package com.example.domain.tailedbeasts
 
-import com.example.domain.characters.Character
+import com.example.domain.common.Character
+
 
 fun TailedBeast.toCharacter(): Character {
     return Character(

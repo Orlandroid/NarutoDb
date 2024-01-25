@@ -8,7 +8,7 @@ import com.example.data.characters.CharactersApi
 import com.example.data.characters.CharactersPagingSource
 import com.example.data.di.CoroutineDispatchers
 import com.example.data.utils.getPagingConfig
-import com.example.domain.characters.Character
+import com.example.domain.common.Character
 import com.example.presentation.base.BaseViewModel
 import com.example.presentation.helpers.NetworkHelper
 import dagger.hilt.android.lifecycle.HiltViewModel

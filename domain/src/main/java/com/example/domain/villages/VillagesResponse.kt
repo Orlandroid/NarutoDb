@@ -1,6 +1,6 @@
 package com.example.domain.villages
 
-import com.example.domain.characters.Character
+import com.example.domain.common.Character
 import kotlinx.serialization.Serializable
 
 @Serializable

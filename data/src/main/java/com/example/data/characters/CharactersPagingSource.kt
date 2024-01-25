@@ -2,8 +2,8 @@ package com.example.data.characters
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.domain.characters.Character
 import retrofit2.HttpException
+import com.example.domain.common.Character
 
 
 class CharactersPagingSource(

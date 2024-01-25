@@ -6,10 +6,10 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.domain.characters.Character
 import com.example.presentation.R
 import com.example.presentation.databinding.ItemCharacterBinding
 import com.example.presentation.extensions.click
+import com.example.domain.common.Character
 
 
 class CharacterAdapter(private val clickOnCharacter: (Character) -> Unit) :

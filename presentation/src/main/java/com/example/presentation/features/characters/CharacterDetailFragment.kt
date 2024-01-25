@@ -1,7 +1,7 @@
 package com.example.presentation.features.characters
 
 import androidx.navigation.fragment.navArgs
-import com.example.domain.characters.Character
+import com.example.domain.common.Character
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentCharacterDetailBinding

@@ -4,8 +4,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.domain.kara.Kara
+import com.example.domain.kara.toCharacter
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentKaraBinding
@@ -13,6 +15,7 @@ import com.example.presentation.extensions.getError
 import com.example.presentation.extensions.gone
 import com.example.presentation.extensions.showError
 import com.example.presentation.extensions.showErrorApi
+import com.example.presentation.extensions.toJson
 import com.example.presentation.extensions.visible
 import com.example.presentation.features.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,7 +41,11 @@ class KaraFragment :
     }
 
     private fun clickOnKara(kara: Kara) {
-
+        findNavController().navigate(
+            KaraFragmentDirections.navigationToCharactersDetailFragment(
+                kara.toCharacter().toJson()
+            )
+        )
     }
 
     private fun getVillages() {
