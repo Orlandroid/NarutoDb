@@ -1,8 +1,5 @@
 package com.example.androidbase.presentation
 
-import com.example.androidbase.presentation.Dependencies.ROOM
-import com.example.androidbase.presentation.Dependencies.ROOM_COMPILER
-import com.example.androidbase.presentation.Dependencies.ROOM_KOTLIN_EXTENSION
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 
@@ -18,9 +15,9 @@ object Dependencies {
     const val ANDROIDX_LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
     const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
     const val DRAWER_LAYOUT = "androidx.drawerlayout:drawerlayout:1.2.0"
-    const val DAGGER_HILT = "com.google.dagger:hilt-android:2.46.1"
+    const val DAGGER_HILT = "com.google.dagger:hilt-android:2.49"
     const val DAGGER_HILT_COMPILER = "androidx.hilt:hilt-compiler:1.1.0"
-    const val DAGGER_HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:2.46.1"
+    const val DAGGER_HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:2.49"
     const val GLIDE = "com.github.bumptech.glide:glide:4.16.0"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:4.16.0"
     const val KOTLIN_STDLIB_JDK7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.31"

@@ -77,5 +77,5 @@ dependencies {
     implementation(Dependencies.SWIPE_REFRESH_LAYOUT)
     implementation(Dependencies.PAGING)
     //implementation("com.github.Spikeysanju:MotionToast:1.4")
-    implementation("io.coil-kt:coil:2.5.0")
+    implementation("io.coil-kt:coil:2.6.0")
 }
